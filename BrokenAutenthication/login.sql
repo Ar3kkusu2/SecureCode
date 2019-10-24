@@ -1,10 +1,13 @@
+/* DB */
 CREATE DATABASE IF NOT EXISTS securecode;
 
 use securecode;
 
 CREATE TABLE IF NOT EXISTS users (
-    user varchar(50) PRIMARY KEY;
-    pass varchar(255);
+    user VARCHAR(50) NOT NULL PRIMARY KEY,
+    pass VARCHAR(250)
 );
 
-INSERT INTO users VALUES ('alex','hola');
+/* Insert [alex - admin1234*/
+INSERT INTO users (user, pass)
+VALUES ('alex', 'admin1234'); 
