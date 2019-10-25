@@ -8,6 +8,6 @@ CREATE TABLE IF NOT EXISTS users (
     pass VARCHAR(250)
 );
 
-/* Insert [alex - admin1234*/
+/* Insert [alex - admin1234]*/
 INSERT INTO users (user, pass)
-VALUES ('alex', 'admin1234'); 
+VALUES ('alex', '$2y$10$wIVcEFAU/yRgc1CRuAq4IevG55ton8tgHOkliQMRI3wRJmaj5Dife'); 
