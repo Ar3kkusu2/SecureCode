@@ -28,10 +28,11 @@ $result = $conn->query($sql);
 
 $row = $result->fetch_assoc();
 if (($row) && ($user == $row["user"]) && (password_verify($password, $row["pass"]))) {
-    echo "OK";
-} else{
+    session_start();
     $_SESSION['user'] = $user;
-    header('login_ok.html');
+    header('location: login_ok.php');
+} else{    
+    header('location: login.html');
 }
 
 $conn->close();
