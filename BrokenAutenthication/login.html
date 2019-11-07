@@ -3,10 +3,24 @@
         <title>Broken Login</title>
     </head>
     <body>
-        <form action="login.php" method="POST">
+        <form action="login_reCaptcha.php" method="POST">
+
+            <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+            <input type="hidden" name="action" value="validate_captcha">
+
             User:<input type="text" name="user"><br>
             Pass:<input type="password" name="pass"><br>
+
             <input type="submit" value="Login">
         </form>
+
+        <script src="https://www.google.com/recaptcha/api.js?render=KEY"></script>
+        <script>
+            grecaptcha.ready(function() {
+                grecaptcha.execute('KEY', {action: 'validate_captcha'}).then(function(token) {
+                    document.getElementById('g-recaptcha-response').value = token;
+                });
+            });
+        </script>
     </body>
 </html>
