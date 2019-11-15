@@ -21,7 +21,7 @@ if (($row) && ($user == $row["user"]) && (password_verify($password, $row["pass"
     $_SESSION['user'] = $user;
     header('location: login_ok.php');
 } else{    
-    header('location: login.html');
+    header('location: ../login.html');
 }
 
 $conn->close();

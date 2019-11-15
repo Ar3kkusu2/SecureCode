@@ -1,5 +1,5 @@
 <?php
-require 'composer/vendor/autoload.php';
+require '../composer/vendor/autoload.php';
 require 'db.php';
 
 $google2fa = new \PragmaRX\Google2FAQRCode\Google2FA();
@@ -23,7 +23,7 @@ if (($row) && ($valid)) {
     echo 'OK';
   
 } else{    
-    header('location: login_2FA.html');
+    header('location: ../login_2FA.html');
 }
 
 $conn->close();
