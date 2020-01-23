@@ -21,7 +21,7 @@ $stmt->execute();
 $result = $stmt->get_result();
 
 while ($row = $result->fetch_assoc()) {
-    if (($row) && ($user == $row["user"]) && (password_verify($pass, $row["pass"]))) {
+    if (($row) && ($user == $row["user"]) && (password_verify($pass, $row["pass"]))) {*/
     session_start();
     $_SESSION['user'] = $user;
     header('location: login_ok.php');
